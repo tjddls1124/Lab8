@@ -28,17 +28,17 @@ public class GridAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 0;
+        return data.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return null;
+        return data.get(position);
     }
 
     @Override
     public long getItemId(int position) {
-        return 0;
+        return position;
     }
 
     @Override
@@ -48,10 +48,9 @@ public class GridAdapter extends BaseAdapter {
             convertView = new GridItem(context);
         ( (GridItem) convertView).setData(data.get(position));
 
-        return null;
+        return convertView;
     }
     public void addFruit(Fruit fruit){
         data.add(fruit);
-        notifyDataSetChanged();
     }
 }

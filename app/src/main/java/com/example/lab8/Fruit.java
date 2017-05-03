@@ -11,11 +11,16 @@ public class Fruit {
 
     public String name;
     public int imgno;
+    public String price;
+    public boolean isPriceVisible;
+    public int index;
 
-
-    public Fruit(String name, int imgno) {
+    public Fruit(String name, int imgno, String price) {
+        this.index = imgno;
         this.name = name;
-        this.imgno = imgno;
+        this.imgno = fruit_imgno[imgno];
+        this.price = price;
+        isPriceVisible = false;
     }
 
     public String getName() {
